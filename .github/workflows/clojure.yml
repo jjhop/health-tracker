@@ -1,6 +1,7 @@
 name: 'build_from_master'
-author: 'Rafał Kotusiewicz'
+
 on: [push]
+
 jobs:
   build:
 
