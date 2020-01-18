@@ -3,9 +3,19 @@
            (java.awt.event ActionListener)
            (javax.swing JOptionPane)))
 
-(defn quit-listener-handler []
+(defn before-exit []
+  (println "TODO: what should be done before exit?"))
+
+(defn quit-listener-handler [parent]
   ;; todo: confirmation before quit
-  (java.lang.System/exit 1))
+  (let [dialogResult (JOptionPane/showConfirmDialog parent
+                                                    "Are you sure you want to quit?"
+                                                    "Confirm..."
+                                                    JOptionPane/YES_NO_OPTION)]
+    (if (= dialogResult JOptionPane/YES_OPTION)
+      (do
+        (before-exit)
+        (java.lang.System/exit 1)))))
 
 (defn about-listener-handler []
   (JOptionPane/showMessageDialog
@@ -16,7 +26,7 @@
 
 (def quit-click-listener (proxy [ActionListener] []
                            (actionPerformed [evt]
-                             (quit-listener-handler))))
+                             (quit-listener-handler (.getSource evt)))))
 
 
 (def about-click-listener (proxy [ActionListener] []
