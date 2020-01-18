@@ -1,7 +1,6 @@
 name: 'build_from_master'
 author: 'Rafał Kotusiewicz'
 on: [push]
-
 jobs:
   build:
 
@@ -13,7 +12,3 @@ jobs:
       run: lein deps
     - name: Run tests
       run: lein test
-
-branding:
-  icon: 'award'  
-  color: 'green'
