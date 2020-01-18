@@ -7,4 +7,5 @@
                  [org.clojure/clojure "1.10.1"]
                  [org.hsqldb/hsqldb "2.5.0"]]
   :aot :all
+  :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
   :main ht.boot.Main)
