@@ -1,4 +1,4 @@
-(defproject dmail "0.0.1-SNAPSHOT"
+(defproject health-tracker "0.0.1-SNAPSHOT"
   :description "Not yet..."
   :url "https://github.com/jjhop/health-tracker"
   :license {:name "GNU General Public License v3.0"
