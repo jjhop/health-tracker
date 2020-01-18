@@ -1,6 +1,10 @@
-name: Clojure CI
+name: 'build_from_master'
 
 on: [push]
+
+branding:
+  icon: 'award'  
+  color: 'green'
 
 jobs:
   build:
@@ -14,6 +18,3 @@ jobs:
     - name: Run tests
       run: lein test
 
-branding:
-  icon: 'award'  
-  color: 'green'
