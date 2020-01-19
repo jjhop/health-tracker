@@ -1,7 +1,7 @@
 (ns ht.repository
   (:require
    [clojure.java.io :as io]
-   [clojure.java.jdbc :as jdbc]))
+   [next.jdbc :as jdbc]))
 
 
 (defn database-spec [app-data-directory]

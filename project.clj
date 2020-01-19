@@ -6,7 +6,7 @@
   :dependencies [
                  [org.clojure/clojure "1.10.1"]
                  [org.hsqldb/hsqldb "2.5.0"]
-                 [org.clojure/java.jdbc "0.7.11"]]
+                 [seancorfield/next.jdbc "1.0.13"]]
   :aot :all
   :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
   :main ht.boot.Main)
